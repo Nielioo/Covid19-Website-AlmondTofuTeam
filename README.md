@@ -1,2 +1,2 @@
-# Covid19-Website-Almond-Tofu-
+# Covid19 Website | Almond Tofu Team
 For UKPETRA FAITH Competition
