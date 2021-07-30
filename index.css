@@ -32,7 +32,11 @@
     U+FEFF, U+FFFD;
 }
 
+*{
+    font-family: "Poppins";
+    box-sizing: border-box;
+}
+
 p {
-  font-family: "Poppins";
   color: blue;
 }
