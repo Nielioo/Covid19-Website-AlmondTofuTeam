@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Almond Tofu</title>
   <link rel="stylesheet" href="index.css" />
 </head>
 
@@ -15,16 +15,22 @@
   ?>
 
   <div class="container">
-    <div class="header">
-      <h1>Headline apapun yang panjang</h1>
-      <label>Tagline</label>
-      <br />
-      <button class="button"><a href="#">Next</a></button>
+    <div class="hero">
+      <div class="hero_text">
+        <h1>Headline apapun yang panjang</h1>
+        <label>Tagline</label>
+      </div>
+      <div class="hero_btn">
+        <a href="#" class="btn">See More</a>
+      </div>
+      <div class="hero_image">
+        <img src="assets/family.png" />
+      </div>
     </div>
-    <div>
-      <img src="assets/family.png" />
+
+    <div class="first whitebg">
+      <h1>News & Tips</h1>
     </div>
-    <div class="first"></div>
   </div>
 </body>
 
