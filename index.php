@@ -71,7 +71,6 @@
       </section>
     </section>
 
-
   </div>
 
   <script src="http://code.jquery.com/jquery.js"></script>
