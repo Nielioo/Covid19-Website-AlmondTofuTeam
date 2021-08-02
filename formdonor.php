@@ -47,10 +47,7 @@
             ?>
         </select>
 
-        <!-- <input type="text" name="rumah_sakit" placeholder="Rumah Sakit">
-        <input type="text" class="form-field animation a4" name="golongan_darah" placeholder="Golongan Darah"> -->
-
-        <input class="form-button animation a6" type="submit" name="submit" value="SUBMIT">
+        <input type="submit" name="submit" value="SUBMIT">
     </form>
 
     <?php

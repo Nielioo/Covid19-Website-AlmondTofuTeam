@@ -32,7 +32,7 @@
         <div class="form">
             <div class="sign-in" id="sign-in-info">
                 <h1>Sign In</h1>
-                <form id="sign-in-form" action="logreg.php" method="post">
+                <form id="sign-in-form" method="post">
                     <input class="content" type="email" placeholder="Email" required/>
                     <input class="content" type="password" placeholder="Password" required/>
                     <p class="forgot-password">Forgot your password?</p>
@@ -66,7 +66,7 @@
             </div>
             <div class="sign-up" id="sign-up-info">
                 <h1>Create Account</h1>
-                <form id="sign-up-form" action="logreg.php" method="post" enctype="multipart/form-data">
+                <form id="sign-up-form" method="post" enctype="multipart/form-data">
                     <input class="content" type="text" name="nama" placeholder="Name" required>
                     <input class="content" type="text" name="username" placeholder="Username" required>
                     <input class="content" type="text" name="domisili" placeholder="Domisili" required>
@@ -85,6 +85,7 @@
             $password = $_POST['password'];
 
             createProfile($nama, $username, $domisili, $email, $password);
+            // header("location: profilePage.php");
         }
         ?>
 
