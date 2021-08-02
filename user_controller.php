@@ -36,3 +36,28 @@ function createProfile($nama, $username, $domisili, $email, $password)
     }
     close($conn);
 }
+
+// function readProfile($user_id)
+// {
+//     $conn = connect();
+
+//     $query = $conn->prepare("SELECT * FROM `user_profile` WHERE `user_id`=?;");
+//     $query->bind_param('s', $user_id);
+//     $query->execute() or die(mysqli_error($conn));
+
+//     $result = $query->get_result();
+//     $data = $result->fetch_assoc();
+
+//     if (!empty($data)) {
+//         $obj['id'] = $data['id'];
+//         $obj['user_id'] = $data['user_id'];
+//         $obj['profile_picture'] = $data['profile_picture'];
+//         $obj['nama'] = $data['nama'];
+//         $obj['email'] = $data['email'];
+//         $obj['password'] = $data['password'];
+//         $obj['tipe_user'] = $data['tipe_user'];
+//     }
+//     close($conn);
+
+//     return $obj;
+// }
