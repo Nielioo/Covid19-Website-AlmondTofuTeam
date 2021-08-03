@@ -34,17 +34,16 @@
       <section class="news_carousel">
         <div class="owl-carousel owl-theme">
           <?php
-          for ($i = 0; $i < 12; $i++) {
+          for ($i = 0; $i < 7; $i++) {
           ?>
             <div class="item">
               <figure class="snip1208">
-                <img id="news_image<?=$i?>" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample66.jpg" alt="sample66" />
+                <img id="news_image<?= $i ?>" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample66.jpg" />
                 <div class="date"><span class="day">28</span><span class="month">Oct</span></div>
                 <figcaption>
-                  <h3 id="news_title<?=$i?>">The World Ended Yesterday</h3>
-                  <p id="news_description<?=$i?>">
-                    I don't need to compromise my principles, because they don't have the slightest bearing on what happens
-                    to me anyway.
+                  <h3 id="news_title<?= $i ?>">Title</h3>
+                  <p id="news_description<?= $i ?>">
+                    Description
                   </p>
                   <button>Read More</button>
                 </figcaption><a href="#"></a>
@@ -78,10 +77,10 @@
             items: 1
           },
           600: {
-            items: 3
+            items: 2
           },
           1000: {
-            items: 4
+            items: 3
           }
         }
       })

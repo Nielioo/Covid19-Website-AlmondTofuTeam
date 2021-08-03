@@ -2,6 +2,8 @@ function getnews() {
     fetch("https://newsapi.org/v2/top-headlines?country=id&category=health&apiKey=b848541b745c4af083d4794ca0c6d9c9")
         .then(a => a.json())
         .then(response => {
+            // document.getElementById("output").innerHTML = response.articles.length;
+
             for (var i = 0; i < response.articles.length; i++) {
                 // document.getElementById("output").innerHTML +=
                 //     "<div style='padding-top: 20px'><img style='float: left; width: 150px;' src=" + response.articles[i].urlToImage + "><h1>"
