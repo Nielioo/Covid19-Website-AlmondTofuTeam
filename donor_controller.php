@@ -162,4 +162,40 @@ function getGolDarahID($gol_darah)
 
     return $gol_darah_id;
 }
+
+function readAllRumahSakit()
+{
+    $rumah_sakit_data = array();
+
+    $connection = connect();
+
+    if ($connection != null) {
+        $query = $connection->prepare(
+            "SELECT `nama_rs`, `alamat_rs`, `domisili_rs` FROM `rs` ORDER BY `nama_rs`"
+        );
+        $query->execute() or die(mysqli_error($connection));
+
+        $result = $query->get_result();
+        if (!empty($result)) {
+            $row_count = 0;
+            while ($row = $result->fetch_assoc()) {
+                $data = array(
+                    'nama' => $row['nama_rs'],
+                    'alamat' => $row['alamat_rs'],
+                    'domisili' => $row['domisili_rs']
+                );
+
+                array_push($rumah_sakit_data, $data);
+            }
+        } else {
+            echo "rumah sakit not found";
+        }
+    } else {
+        echo "connection failed";
+    }
+
+    close($connection);
+
+    return $rumah_sakit_data;
+}
 ?>
