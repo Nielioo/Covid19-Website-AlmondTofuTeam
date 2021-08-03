@@ -15,6 +15,9 @@ function getnews() {
                     + response.articles[i].url + "target='_blank'>"
                     + response.articles[i].url + "</div>";
 
+                // document.getElementById("news_image").innerHTML +=
+                //     "<img src=" + response.articles[i].urlToImage + ">";
+
                 document.getElementById("news_image" + i).src = response.articles[i].urlToImage;
                 document.getElementById("news_title" + i).innerHTML = response.articles[i].title;
                 // document.getElementById("news_date" + i).innerHTML = response.articles[i].publishedAt;

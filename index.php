@@ -38,6 +38,7 @@
           ?>
             <div class="item">
               <figure class="snip1208">
+                <!-- <div id="news_image"></div> -->
                 <img id="news_image<?= $i ?>" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample66.jpg" />
                 <div class="date"><span class="day">28</span><span class="month">Oct</span></div>
                 <figcaption>
