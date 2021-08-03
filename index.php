@@ -39,12 +39,12 @@
             <div class="item">
               <figure class="snip1208">
                 <img id="news_image<?= $i ?>" />
-                <div class="date"><span class="day">28</span><span class="month">Oct</span></div>
+                <div class="date"><span id="news_day<?= $i ?>" class="day">01</span><span id="news_month<?= $i ?>" class="month">JAN</span></div>
                 <figcaption>
                   <h3 id="news_title<?= $i ?>">Title <?= $i ?></h3>
                   <p id="news_description<?= $i ?>">Description</p>
                   <button>Read More</button>
-                </figcaption><a href="#"></a>
+                </figcaption><a id="news_url<?= $i ?>" href="#" target="_blank"></a>
               </figure>
             </div>
           <?php
@@ -52,8 +52,7 @@
           ?>
         </div>
       </section>
-      <!-- <button onclick="getnews(20)">Get News!!</button>
-      <div id="output"></div> -->
+      <div id="output"></div>
     </section>
 
   </div>
