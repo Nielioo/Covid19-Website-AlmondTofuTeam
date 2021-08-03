@@ -5,14 +5,15 @@ function getnews() {
             // document.getElementById("output").innerHTML = response.articles.length;
 
             for (var i = 0; i < response.articles.length; i++) {
-                // document.getElementById("output").innerHTML +=
-                //     "<div style='padding-top: 20px'><img style='float: left; width: 150px;' src=" + response.articles[i].urlToImage + "><h1>"
-                //     + response.articles[i].title + "</h1>"
-                //     + response.articles[i].publishedAt + "<br>"
-                //     + response.articles[i].source.name + "<br>"
-                //     + response.articles[i].description + "<a href="
-                //     + response.articles[i].url + "target='_blank'>"
-                //     + response.articles[i].url + "</div>";
+                document.getElementById("output").innerHTML +=
+                    "<div style='padding-top: 20px'><img style='float: left; width: 150px;' src=" + response.articles[i].urlToImage + "><h1>"
+                    // + response.articles[i].status + "<br>"
+                    + response.articles[i].title + "</h1>"
+                    + response.articles[i].publishedAt + "<br>"
+                    + response.articles[i].source.name + "<br>"
+                    + response.articles[i].description + "<a href="
+                    + response.articles[i].url + "target='_blank'>"
+                    + response.articles[i].url + "</div>";
 
                 document.getElementById("news_image" + i).src = response.articles[i].urlToImage;
                 document.getElementById("news_title" + i).innerHTML = response.articles[i].title;
