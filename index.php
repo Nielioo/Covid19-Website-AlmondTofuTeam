@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="owlcarousel/owl.carousel.css" />
   <link rel="stylesheet" href="owlcarousel/owl.theme.default.css" />
+  <link rel="stylesheet" href="card/card_news.css">
 </head>
 
 <body>
@@ -32,43 +33,31 @@
       <h1>News & Tips</h1>
       <section class="news_carousel">
         <div class="owl-carousel owl-theme">
-          <div class="item">
-            <h4>1</h4>
-          </div>
-          <div class="item">
-            <h4>2</h4>
-          </div>
-          <div class="item">
-            <h4>3</h4>
-          </div>
-          <div class="item">
-            <h4>4</h4>
-          </div>
-          <div class="item">
-            <h4>5</h4>
-          </div>
-          <div class="item">
-            <h4>6</h4>
-          </div>
-          <div class="item">
-            <h4>7</h4>
-          </div>
-          <div class="item">
-            <h4>8</h4>
-          </div>
-          <div class="item">
-            <h4>9</h4>
-          </div>
-          <div class="item">
-            <h4>10</h4>
-          </div>
-          <div class="item">
-            <h4>11</h4>
-          </div>
-          <div class="item">
-            <h4>12</h4>
-          </div>
+          <?php
+          for ($i = 0; $i < 12; $i++) {
+          ?>
+            <div class="item">
+              <figure class="snip1208">
+                <img id="news_image<?=$i?>" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample66.jpg" alt="sample66" />
+                <div class="date"><span class="day">28</span><span class="month">Oct</span></div>
+                <figcaption>
+                  <h3 id="news_title<?=$i?>">The World Ended Yesterday</h3>
+                  <p id="news_description<?=$i?>">
+                    I don't need to compromise my principles, because they don't have the slightest bearing on what happens
+                    to me anyway.
+                  </p>
+                  <button>Read More</button>
+                </figcaption><a href="#"></a>
+              </figure>
+            </div>
+          <?php
+          }
+          ?>
+        </div>
       </section>
+      <button onclick="getnews()">Get News!!</button>
+      <div id="output"></div>
+
     </section>
 
   </div>
@@ -81,7 +70,7 @@
         loop: true,
         margin: 10,
         nav: true,
-        autoplay: true,
+        autoplay: false,
         autoplayTimeout: 5000,
         autoplayHoverPause: true,
         responsive: {
@@ -92,12 +81,13 @@
             items: 3
           },
           1000: {
-            items: 5
+            items: 4
           }
         }
       })
     });
   </script>
+  <script src="news_api/api.js"></script>
 </body>
 
 </html>

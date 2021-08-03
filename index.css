@@ -102,15 +102,19 @@ body {
 .owl-nav .owl-next {
   /* margin: 0; */
   position: absolute;
-  top: 25%;
+  top: 50%;
   transform: translateY(-50%);
   font-size: 50px !important;
 }
 
 .owl-nav .owl-prev {
-  left: 0;
+  left: -20px;
 }
 
 .owl-nav .owl-next {
-  right: 0;
+  right: -20px;
+}
+
+.owl-stage .active {
+  background-color: transparent;
 }
