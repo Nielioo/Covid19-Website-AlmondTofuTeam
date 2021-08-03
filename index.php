@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="card/card_news.css">
 </head>
 
-<body>
+<body onload="getnews(12)">
   <?php
   require_once("navigation_bar.html");
   ?>
@@ -34,18 +34,15 @@
       <section class="news_carousel">
         <div class="owl-carousel owl-theme">
           <?php
-          for ($i = 0; $i < 7; $i++) {
+          for ($i = 0; $i < 12; $i++) {
           ?>
             <div class="item">
               <figure class="snip1208">
-                <!-- <div id="news_image"></div> -->
-                <img id="news_image<?= $i ?>" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample66.jpg" />
+                <img id="news_image<?= $i ?>" />
                 <div class="date"><span class="day">28</span><span class="month">Oct</span></div>
                 <figcaption>
-                  <h3 id="news_title<?= $i ?>">Title</h3>
-                  <p id="news_description<?= $i ?>">
-                    Description
-                  </p>
+                  <h3 id="news_title<?= $i ?>">Title <?= $i ?></h3>
+                  <p id="news_description<?= $i ?>">Description</p>
                   <button>Read More</button>
                 </figcaption><a href="#"></a>
               </figure>
@@ -55,9 +52,8 @@
           ?>
         </div>
       </section>
-      <button onclick="getnews()">Get News!!</button>
-      <div id="output"></div>
-
+      <!-- <button onclick="getnews(20)">Get News!!</button>
+      <div id="output"></div> -->
     </section>
 
   </div>
@@ -67,7 +63,7 @@
   <script>
     $(document).ready(function() {
       $('.owl-carousel').owlCarousel({
-        loop: true,
+        loop: false,
         margin: 10,
         nav: true,
         autoplay: false,
