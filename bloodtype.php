@@ -45,38 +45,6 @@
                 <?php
                 }
                 ?>
-
-                <!-- <div class="card">
-                    <a href="#" class="card_title">A</a>
-                    <div class="card_choice">
-                        <a href="hospital.php?bloodtype=A+" class="half">A+</a>
-                        <a href="#" class="half no-border">A-</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <a href="#" class="card_title">B</a>
-                    <div class="card_choice">
-                        <a href="#" class="half">B+</a>
-                        <a href="#" class="half no-border">B-</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <a href="#" class="card_title">O</a>
-                    <div class="card_choice">
-                        <a href="#" class="half">O+</a>
-                        <a href="#" class="half no-border">O-</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <a href="#" class="card_title">AB</a>
-                    <div class="card_choice">
-                        <a href="#" class="half">AB+</a>
-                        <a href="#" class="half no-border">AB-</a>
-                    </div>
-                </div> -->
             </div>
         </section>
     </div>

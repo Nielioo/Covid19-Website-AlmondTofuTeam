@@ -7,16 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="formdonor.css">
 </head>
 
 <body>
     <?php
-    
+
     session_start();
     if (empty($_SESSION['username'])) {
-      require_once("navigation_bar.html");
+        require_once("navigation_bar.html");
     } else {
-      require_once("navigation_bar_after.html");
+        require_once("navigation_bar_after.html");
     }
 
     require_once("donor_controller.php");
@@ -24,38 +25,48 @@
 
     $golongan_darah_list = getGolDarahList();
     ?>
+    <section class="hero">
+        <h1><b>Donor Form</b></h1>
+        <label><i>Our website always update the latest health news</i></label>
+    </section>
 
-    <form class="form" action="formdonor.php" method="post">
-        <select name="rumah_sakit" id="rumah_sakit" required>
-            <option value="" disabled selected>Pilih Rumah Sakit</option>
+    <section class="donor_form">
+        <form class="form" action="formdonor.php" method="post">
+            <span class="custom-dropdown">
+                <select name="rumah_sakit" id="rumah_sakit" required>
+                    <option value="" disabled selected>Pilih Rumah Sakit</option>
 
-            <?php
-            $rumah_sakit_list = getRumahSakitList();
+                    <?php
+                    $rumah_sakit_list = getRumahSakitList();
 
-            foreach ($rumah_sakit_list as $rumah_sakit) {
-            ?>
-                <option value="<?= $rumah_sakit ?>"><?= $rumah_sakit ?></option>
-            <?php
-            }
-            ?>
-        </select>
+                    foreach ($rumah_sakit_list as $rumah_sakit) {
+                    ?>
+                        <option value="<?= $rumah_sakit ?>"><?= $rumah_sakit ?></option>
+                    <?php
+                    }
+                    ?>
+                </select>
+            </span>
 
-        <select name="golongan_darah" id="golongan_darah" required>
-            <option value="" disabled selected>Pilih Golongan Darah</option>
+            <span class="custom-dropdown">
+                <select name="golongan_darah" id="golongan_darah" required>
+                    <option value="" disabled selected>Pilih Golongan Darah</option>
 
-            <?php
-            $golongan_darah_list = getGolDarahList();
+                    <?php
+                    $golongan_darah_list = getGolDarahList();
 
-            foreach ($golongan_darah_list as $golongan_darah) {
-            ?>
-                <option value="<?= $golongan_darah ?>"><?= $golongan_darah ?></option>
-            <?php
-            }
-            ?>
-        </select>
+                    foreach ($golongan_darah_list as $golongan_darah) {
+                    ?>
+                        <option value="<?= $golongan_darah ?>"><?= $golongan_darah ?></option>
+                    <?php
+                    }
+                    ?>
+                </select>
+            </span>
 
-        <input type="submit" name="submit" value="SUBMIT">
-    </form>
+            <input type="submit" name="submit" value="SUBMIT" class="submit">
+        </form>
+    </section>
 
     <?php
     if (isset($_POST['submit'])) {

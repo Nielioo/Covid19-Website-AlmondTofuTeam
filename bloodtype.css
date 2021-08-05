@@ -2,7 +2,9 @@ body {
   /* background-color: #bdefff; */
   /* background: linear-gradient(aqua, black); */
 
-  background-image: url("assets/background.jpg");
+  /* background-image: url("assets/background.jpg"); */
+  /* background-image: url("assets/bg-01.png"); */
+  background-color: #1ABC9C;
   background-size: 100%;
 }
 
