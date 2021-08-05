@@ -77,12 +77,9 @@
                     $jumlah_donor = getJumlahDonorByRumahSakitID($i + 1, $bloodtype_id);
                 ?>
                     <div class="card">
-                        <h3><?= $rumah_sakit_data[$i]['nama'] ?></h3>
+                        <h3><?= $rumah_sakit_data[$i]['nama'] ?>, <?= $rumah_sakit_data[$i]['domisili'] ?></h3>
                         <div class="line"></div>
-                        <p>
-                            Contrary to popular belief, Lorem Ipsum is not simply random text.
-                            It has roots in a piece of classical Latin
-                        </p>
+                        <p><?= $rumah_sakit_data[$i]['alamat'] ?></p>
                         <h3>Jumlah Donor : <?= $jumlah_donor ?></h3>
                     </div>
                 <?php
