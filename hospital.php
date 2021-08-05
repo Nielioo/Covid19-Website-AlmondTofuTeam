@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="card/card_hospital.css">
 </head>
 
-<body>
+<body onload="getHospital()">
     <?php
     
     session_start();
@@ -46,11 +46,19 @@
 
         <section class="hospital">
             <div class="main-content">
+                <div class="card">
+                    <h3 id="output">test</h3>
+                    <div class="line"></div>
+                    <p>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text.
+                        It has roots in a piece of classical Latin
+                    </p>
+                </div>
                 <?php
                 for ($i = 0; $i < sizeof($rumah_sakit_data); $i++) {
                 ?>
                     <div class="card">
-                        <h3><?=$rumah_sakit_data[$i]['nama']?></h3>
+                        <h3><?= $rumah_sakit_data[$i]['nama'] ?></h3>
                         <div class="line"></div>
                         <p>
                             Contrary to popular belief, Lorem Ipsum is not simply random text.
@@ -63,6 +71,7 @@
             </div>
         </section>
     </div>
+    <script src="hospital_api/hospital_api.js"></script>
 </body>
 
 </html>

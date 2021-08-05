@@ -34,7 +34,8 @@
 
 .whitebg {
   background-color: white;
-  color: #63d6fc;
+  /* color: #63d6fc; */
+  color: #1abc9c;
 }
 
 body {
@@ -42,7 +43,9 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #bdefff;
+  /* background-color: #bdefff; */
+  background-color: #96dbe2;
+
 }
 
 .container {

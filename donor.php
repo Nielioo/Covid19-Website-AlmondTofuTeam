@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golongan Darah</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="donor.css">
 </head>
 
@@ -25,32 +25,32 @@
                 <div class="card">
                     <div class="card_title">A</div>
                     <div class="card_choice">
-                        <div class="half clear_float">A+</div>
-                        <div class="half no-border clear_float">A-</div>
+                        <div class="half">A+</div>
+                        <div class="half no-border">A-</div>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card_title">B</div>
                     <div class="card_choice">
-                        <div class="half clear_float">B+</div>
-                        <div class="half no-border clear_float">B-</div>
+                        <div class="half">B+</div>
+                        <div class="half no-border">B-</div>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card_title">O</div>
                     <div class="card_choice">
-                        <div class="half clear_float">O+</div>
-                        <div class="half no-border clear_float">O-</div>
+                        <div class="half">O+</div>
+                        <div class="half no-border">O-</div>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card_title">AB</div>
                     <div class="card_choice">
-                        <div class="half clear_float">AB+</div>
-                        <div class="half no-border clear_float">AB-</div>
+                        <div class="half">AB+</div>
+                        <div class="half no-border">AB-</div>
                     </div>
                 </div>
             </div>
