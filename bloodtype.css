@@ -6,6 +6,11 @@ body {
   background-size: 100%;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 .container {
 }
 
@@ -53,10 +58,6 @@ body {
   transition: 0.3s;
 }
 
-.card_title:hover {
-    /* background-color: blue; */
-}
-
 .card_choice {
   border-top: 1px solid black;
   border-bottom-left-radius: 14px;
@@ -71,8 +72,14 @@ body {
   flex: 1 1 auto;
   padding: 15px;
   border-right: 1px solid black;
+  transition: all 0.3s;
 }
 
 .no-border {
     border-right: none;
+}
+
+
+.card_title:hover, .half:hover {
+  color: #68ff75;
 }

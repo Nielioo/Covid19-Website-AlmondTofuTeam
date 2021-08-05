@@ -24,15 +24,33 @@
     require_once("donor_controller.php");
 
     $rumah_sakit_data = readAllRumahSakit();
+    $bloodtype = $_GET['bloodtype'];
+
+    if (is_numeric($bloodtype)) {
+        $bloodtype_id = $_GET['bloodtype'] + 1;
+        $bloodtype = readGolDarahByID($bloodtype_id);
+        if ($bloodtype_id % 2 !== 0) {
+            $bloodtype_plus = $bloodtype;
+            $bloodtype_negative = readGolDarahByID($bloodtype_id + 1);
+        } else {
+            $bloodtype_plus = readGolDarahByID($bloodtype_id - 1);
+            $bloodtype_negative = $bloodtype;
+        }
+    } else {
+        $bloodtype .= '+';
+        $bloodtype_id = getGolDarahID($bloodtype);
+        $bloodtype_plus = readGolDarahByID($bloodtype_id);
+        $bloodtype_negative = readGolDarahByID($bloodtype_id + 1);
+    }
     ?>
 
     <div class="container">
         <section class="hero">
-            <h1>A</h1>
+            <h1><?= $bloodtype ?></h1>
             <label>Tagline</label>
             <div class="hero_btn">
-                <a href="#" class="btn">A+</a>
-                <a href="#" class="btn">A-</a>
+                <a href="hospital.php?bloodtype=<?= getGolDarahID($bloodtype_plus) - 1 ?>" class="btn"><?= $bloodtype_plus ?></a>
+                <a href="hospital.php?bloodtype=<?= getGolDarahID($bloodtype_negative) - 1 ?>" class="btn"><?= $bloodtype_negative ?></a>
             </div>
 
             <div class="search">

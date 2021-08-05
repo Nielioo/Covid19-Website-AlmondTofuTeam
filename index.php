@@ -27,7 +27,7 @@
       <h1>Headline apapun yang panjang</h1>
       <label>Tagline</label>
       <div class="hero_btn">
-        <a href="#" class="btn">See More</a>
+        <a href="bloodtype.php" class="btn">See More</a>
       </div>
       <div class="hero_image">
         <img src="assets/family.png" />
