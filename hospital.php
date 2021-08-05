@@ -73,7 +73,12 @@
                     </symbol>
                 </svg>
             </div>
+            <div class="hero_btn">
+                <a href="formdonor.php" class="btn">Donor Form</a>
+            </div>
         </section>
+
+
 
         <section class="hospital">
             <div class="main-content">

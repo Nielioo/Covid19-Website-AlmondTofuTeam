@@ -49,8 +49,8 @@ function getRumahSakitList()
     $connection = connect();
 
     if (!is_null($connection)) {
-        $query = $connection->prepare("SELECT `nama_rs` FROM `rs`");
-        // $query = $connection->prepare("SELECT `nama_rs` FROM `rs` ORDER BY `nama_rs`");
+        // $query = $connection->prepare("SELECT `nama_rs` FROM `rs`");
+        $query = $connection->prepare("SELECT `nama_rs` FROM `rs` ORDER BY `nama_rs`");
         $query->execute();
 
         $result = $query->get_result();
