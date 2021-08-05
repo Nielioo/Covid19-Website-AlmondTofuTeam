@@ -33,8 +33,8 @@
             <div class="sign-in" id="sign-in-info">
                 <h1>Sign In</h1>
                 <form id="sign-in-form" method="post">
-                    <input class="content" type="email" placeholder="Email" required />
-                    <input class="content" type="password" placeholder="Password" required />
+                    <input class="content" type="email" name="email" placeholder="Email" required />
+                    <input class="content" type="password" name="password" placeholder="Password" required />
                     <p class="forgot-password">Forgot your password?</p>
                     <input class="control-button in" type="submit" name="login" value="SIGN IN">
                 </form>
