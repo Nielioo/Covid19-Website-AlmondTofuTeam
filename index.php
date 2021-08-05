@@ -24,8 +24,8 @@
 
   <div class="container">
     <section class="hero">
-      <h1>Headline apapun yang panjang</h1>
-      <label>Tagline</label>
+      <h1><b>Almond Tofu Website</b></h1>
+      <label><i>Our website always update the latest health news</i></label>
       <div class="hero_btn">
         <a href="#" class="btn">See More</a>
       </div>
