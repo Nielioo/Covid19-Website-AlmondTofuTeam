@@ -115,7 +115,7 @@ function getGolDarahList()
     $connection = connect();
 
     if (!is_null($connection)) {
-        $query = $connection->prepare("SELECT `golongan_darah` FROM `golongan_darah` ORDER BY `golongan_darah`");
+        $query = $connection->prepare("SELECT `golongan_darah` FROM `golongan_darah`");
         $query->execute();
 
         $result = $query->get_result();
@@ -161,6 +161,32 @@ function getGolDarahID($gol_darah)
     close($connection);
 
     return $gol_darah_id;
+}
+
+function readGolDarahByID($gol_darah_id)
+{
+    $connection = connect();
+
+    if (!is_null($connection)) {
+        $query = $connection->prepare("SELECT `golongan_darah` FROM `golongan_darah` WHERE `id`=?");
+        $query->bind_param("i", $gol_darah_id);
+        $query->execute();
+
+        $result = $query->get_result();
+        $data = $result->fetch_assoc();
+
+        if (!empty($data)) {
+            $gol_darah = $data['golongan_darah'];
+        } else {
+            echo "golongan darah not found";
+        }
+    } else {
+        echo "connection failed";
+    }
+
+    close($connection);
+
+    return $gol_darah;
 }
 
 function readAllRumahSakit()
