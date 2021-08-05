@@ -14,7 +14,12 @@
 
 <body onload="getnews(12)">
   <?php
-  require_once("navigation_bar.html");
+  session_start();
+  if (empty($_SESSION['username'])) {
+    require_once("navigation_bar.html");
+  } else {
+    require_once("navigation_bar_after.html");
+  }
   ?>
 
   <div class="container">

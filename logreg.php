@@ -56,7 +56,7 @@
                     if (!empty($data)) {
                         session_start();
                         $_SESSION['username'] = $data['username'];
-                        // header("location: profilePage.php");
+                        header("location: index.php");
                     } else {
                         echo "<br><br>warning: user not found";
                     }
@@ -85,7 +85,8 @@
             $password = $_POST['password'];
 
             createProfile($nama, $username, $domisili, $email, $password);
-            // header("location: profilePage.php");
+
+            header("location: logreg.php");
         }
         ?>
 

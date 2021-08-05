@@ -13,7 +13,14 @@
 
 <body>
     <?php
-    require_once("navigation_bar.html");
+    
+    session_start();
+    if (empty($_SESSION['username'])) {
+      require_once("navigation_bar.html");
+    } else {
+      require_once("navigation_bar_after.html");
+    }
+
     require_once("donor_controller.php");
 
     $rumah_sakit_data = readAllRumahSakit();
