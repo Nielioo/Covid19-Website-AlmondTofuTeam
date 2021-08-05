@@ -49,7 +49,8 @@ function getRumahSakitList()
     $connection = connect();
 
     if (!is_null($connection)) {
-        $query = $connection->prepare("SELECT `nama_rs` FROM `rs` ORDER BY `nama_rs`");
+        $query = $connection->prepare("SELECT `nama_rs` FROM `rs`");
+        // $query = $connection->prepare("SELECT `nama_rs` FROM `rs` ORDER BY `nama_rs`");
         $query->execute();
 
         $result = $query->get_result();
@@ -223,5 +224,33 @@ function readAllRumahSakit()
     close($connection);
 
     return $rumah_sakit_data;
+}
+
+function getJumlahDonorByRumahSakitID($rumah_sakit_id, $gol_darah_id)
+{
+    $connection = connect();
+
+    if ($connection != null) {
+        $query = $connection->prepare(
+            "SELECT COUNT(*) AS `jumlah_donor` FROM `donor` WHERE `rs_id`=? AND `gol_darah_id`=?"
+        );
+        $query->bind_param("ii", $rumah_sakit_id, $gol_darah_id);
+        $query->execute();
+
+        $result = $query->get_result();
+        $data = $result->fetch_assoc();
+
+        if (!empty($data)) {
+            $jumlah_donor = $data['jumlah_donor'];
+        } else {
+            echo "jumlah donor not found";
+        }
+    } else {
+        echo "connection failed";
+    }
+
+    close($connection);
+
+    return $jumlah_donor;
 }
 ?>

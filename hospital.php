@@ -13,12 +13,12 @@
 
 <body onload="getHospital()">
     <?php
-    
+
     session_start();
     if (empty($_SESSION['username'])) {
-      require_once("navigation_bar.html");
+        require_once("navigation_bar.html");
     } else {
-      require_once("navigation_bar_after.html");
+        require_once("navigation_bar_after.html");
     }
 
     require_once("donor_controller.php");
@@ -64,16 +64,17 @@
 
         <section class="hospital">
             <div class="main-content">
-                <div class="card">
+                <!-- <div class="card">
                     <h3 id="output">test</h3>
                     <div class="line"></div>
                     <p>
                         Contrary to popular belief, Lorem Ipsum is not simply random text.
                         It has roots in a piece of classical Latin
                     </p>
-                </div>
+                </div> -->
                 <?php
                 for ($i = 0; $i < sizeof($rumah_sakit_data); $i++) {
+                    $jumlah_donor = getJumlahDonorByRumahSakitID($i + 1, $bloodtype_id);
                 ?>
                     <div class="card">
                         <h3><?= $rumah_sakit_data[$i]['nama'] ?></h3>
@@ -82,6 +83,7 @@
                             Contrary to popular belief, Lorem Ipsum is not simply random text.
                             It has roots in a piece of classical Latin
                         </p>
+                        <h3>Jumlah Donor : <?= $jumlah_donor ?></h3>
                     </div>
                 <?php
                 }
