@@ -33,8 +33,8 @@
             <div class="sign-in" id="sign-in-info">
                 <h1>Sign In</h1>
                 <form id="sign-in-form" method="post">
-                    <input class="content" type="email" placeholder="Email" required/>
-                    <input class="content" type="password" placeholder="Password" required/>
+                    <input class="content" type="email" placeholder="Email" required />
+                    <input class="content" type="password" placeholder="Password" required />
                     <p class="forgot-password">Forgot your password?</p>
                     <input class="control-button in" type="submit" name="login" value="SIGN IN">
                 </form>
@@ -77,17 +77,17 @@
                 </form>
 
                 <?php
-        if (isset($_POST['register'])) {
-            $nama = $_POST['nama'];
-            $username = $_POST['username'];
-            $domisili = $_POST['domisili'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
+                if (isset($_POST['register'])) {
+                    $nama = $_POST['nama'];
+                    $username = $_POST['username'];
+                    $domisili = $_POST['domisili'];
+                    $email = $_POST['email'];
+                    $password = $_POST['password'];
 
-            createProfile($nama, $username, $domisili, $email, $password);
-            // header("location: profilePage.php");
-        }
-        ?>
+                    createProfile($nama, $username, $domisili, $email, $password);
+                    // header("location: profilePage.php");
+                }
+                ?>
 
             </div>
         </div>
