@@ -84,3 +84,28 @@ li a {
   z-index: 1;
   box-shadow: 0 0 1em 0.5ex rgba(17,17,17,0.5);
 }
+
+.left {
+  margin-left: 1em;
+  margin-top: 0.5em;
+  float: left;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.left::after {
+  clear: both;
+}
+
+.logo {
+  height: 40px;
+}
+
+.logo_text {
+  color: white;
+  text-decoration: none;
+  padding: 0em 2em;
+  font-weight: 300;
+}
