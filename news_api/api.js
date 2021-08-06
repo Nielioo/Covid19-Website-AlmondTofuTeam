@@ -1,5 +1,5 @@
 function getnews(news_amount) {
-    fetch("https://newsapi.org/v2/top-headlines?country=id&category=health&apiKey=b848541b745c4af083d4794ca0c6d9c9")
+    fetch("https://newsapi.org/v2/top-headlines?country=id&category=health&apiKey=261ad22518864703b5cb35d3e266b61a")
         .then(a => a.json())
         .then(response => {
             for (let i = 0; i < news_amount; i++) {
@@ -22,7 +22,14 @@ function getnews(news_amount) {
                 const month = monthNames[monthNumber - 1];
 
                 const title = response.articles[i].title.split("-")[0];
-                const description = response.articles[i].description.substring(0, 151) + "...";
+                let description = response.articles[i].description;
+                // let description_length = description.length;
+
+                // if (description_length > 150) {
+                //     description = description.substring(0, 151) + "...";
+                // }
+                
+                // const description = response.articles[i].description.substring(0, 151) + "...";
 
                 document.getElementById("news_image" + i).src = response.articles[i].urlToImage;
                 document.getElementById("news_title" + i).innerHTML = title;
