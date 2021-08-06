@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="navigation_bar.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="hospital.css">
     <link rel="stylesheet" href="card/card_hospital.css">

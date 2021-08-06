@@ -6,9 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Almond Tofu</title>
-  <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="owlcarousel/owl.carousel.css" />
-  <link rel="stylesheet" href="owlcarousel/owl.theme.default.css" />
+  <link rel="stylesheet" href="navigation_bar.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="owlcarousel/owl.carousel.css">
+  <link rel="stylesheet" href="owlcarousel/owl.theme.default.css">
   <link rel="stylesheet" href="card/card_news.css">
 </head>
 
