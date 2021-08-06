@@ -17,6 +17,7 @@
     session_start();
     if (empty($_SESSION['username'])) {
         require_once("navigation_bar.html");
+        header("location: logreg.php");
     } else {
         require_once("navigation_bar_after.html");
     }
@@ -79,9 +80,10 @@
         if (isset($_POST['submit'])) {
             $rs = $_POST['rumah_sakit'];
             $gol_darah = $_POST['golongan_darah'];
+            $bloodtype = substr($gol_darah, 0, strlen($gol_darah) - 1);
 
             createDonor($rs, $gol_darah);
-            // header("location: index.php");
+            header("location: hospital.php?bloodtype=" . $bloodtype);
         }
         ?>
 </body>

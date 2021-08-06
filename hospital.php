@@ -28,7 +28,10 @@
     $bloodtype = $_GET['bloodtype'];
 
     if (is_numeric($bloodtype)) {
-        $bloodtype_id = $_GET['bloodtype'] + 1;
+        $bloodtype_id = $_GET['bloodtype'];
+        if (empty($_GET['name'])) {
+            $bloodtype_id++;
+        }
         $bloodtype = readGolDarahByID($bloodtype_id);
         if ($bloodtype_id % 2 !== 0) {
             $bloodtype_plus = $bloodtype;
@@ -131,7 +134,7 @@
     <?php
     require_once("footer.html");
     ?>
-    
+
     <script src="hospital_api/hospital_api.js"></script>
 </body>
 
