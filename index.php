@@ -60,6 +60,9 @@
       <div id="output"></div>
     </section>
 
+    <?php
+    require_once("footer.html");
+    ?>
   </div>
 
   <script src="http://code.jquery.com/jquery.js"></script>

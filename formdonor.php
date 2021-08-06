@@ -25,58 +25,64 @@
 
     $golongan_darah_list = getGolDarahList();
     ?>
-    <section class="hero">
-        <h1><b>Donor Form</b></h1>
-        <label><i>Our website always update the latest health news</i></label>
-    </section>
+    <div id="bloodtype_container">
+        <section class="hero">
+            <h1><b>Donor Form</b></h1>
+            <label><i>Our website always update the latest health news</i></label>
+        </section>
 
-    <section class="donor_form">
-        <form class="form" action="formdonor.php" method="post">
-            <span class="custom-dropdown">
-                <select name="rumah_sakit" id="rumah_sakit" required>
-                    <option value="" disabled selected>Pilih Rumah Sakit</option>
+        <section class="donor_form">
+            <form class="form" action="formdonor.php" method="post">
+                <span class="custom-dropdown">
+                    <select name="rumah_sakit" id="rumah_sakit" required>
+                        <option value="" disabled selected>Pilih Rumah Sakit</option>
 
-                    <?php
-                    $rumah_sakit_list = getRumahSakitList();
+                        <?php
+                        $rumah_sakit_list = getRumahSakitList();
 
-                    foreach ($rumah_sakit_list as $rumah_sakit) {
-                    ?>
-                        <option value="<?= $rumah_sakit ?>"><?= $rumah_sakit ?></option>
-                    <?php
-                    }
-                    ?>
-                </select>
-            </span>
+                        foreach ($rumah_sakit_list as $rumah_sakit) {
+                        ?>
+                            <option value="<?= $rumah_sakit ?>"><?= $rumah_sakit ?></option>
+                        <?php
+                        }
+                        ?>
+                    </select>
+                </span>
 
-            <span class="custom-dropdown">
-                <select name="golongan_darah" id="golongan_darah" required>
-                    <option value="" disabled selected>Pilih Golongan Darah</option>
+                <span class="custom-dropdown">
+                    <select name="golongan_darah" id="golongan_darah" required>
+                        <option value="" disabled selected>Pilih Golongan Darah</option>
 
-                    <?php
-                    $golongan_darah_list = getGolDarahList();
+                        <?php
+                        $golongan_darah_list = getGolDarahList();
 
-                    foreach ($golongan_darah_list as $golongan_darah) {
-                    ?>
-                        <option value="<?= $golongan_darah ?>"><?= $golongan_darah ?></option>
-                    <?php
-                    }
-                    ?>
-                </select>
-            </span>
+                        foreach ($golongan_darah_list as $golongan_darah) {
+                        ?>
+                            <option value="<?= $golongan_darah ?>"><?= $golongan_darah ?></option>
+                        <?php
+                        }
+                        ?>
+                    </select>
+                </span>
 
-            <input type="submit" name="submit" value="SUBMIT" class="submit">
-        </form>
-    </section>
+                <input type="submit" name="submit" value="SUBMIT" class="submit">
+            </form>
+        </section>
+    </div>
 
-    <?php
-    if (isset($_POST['submit'])) {
-        $rs = $_POST['rumah_sakit'];
-        $gol_darah = $_POST['golongan_darah'];
+        <?php
+        require_once("footer.html");
+        ?>
 
-        createDonor($rs, $gol_darah);
-        // header("location: index.php");
-    }
-    ?>
+        <?php
+        if (isset($_POST['submit'])) {
+            $rs = $_POST['rumah_sakit'];
+            $gol_darah = $_POST['golongan_darah'];
+
+            createDonor($rs, $gol_darah);
+            // header("location: index.php");
+        }
+        ?>
 </body>
 
 </html>

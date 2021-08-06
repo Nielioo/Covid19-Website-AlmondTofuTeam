@@ -125,3 +125,10 @@ body {
 .owl-stage .active {
   background-color: transparent;
 }
+
+#footer {
+  text-align: center;
+  background-color: black;
+  margin: 0;
+  padding: 20px;
+}

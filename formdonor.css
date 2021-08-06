@@ -1,3 +1,7 @@
+#bloodtype_container {
+  height: 100vh;
+}
+
 .donor_form {
   margin-top: 5em;
   display: flex;
@@ -19,7 +23,7 @@
 
 .submit:hover {
   transition: all 0.3s;
-  color: black;
+  color: white;
   background-color: #4caf50;
 }
 
