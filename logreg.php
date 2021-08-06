@@ -95,6 +95,10 @@
         </div>
     </div>
 
+    <?php
+    require_once("footer.html");
+    ?>
+
     <script src="logreg.js"></script>
 
 </body>

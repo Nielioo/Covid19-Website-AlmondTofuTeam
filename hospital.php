@@ -127,6 +127,11 @@
             </div>
         </section>
     </div>
+
+    <?php
+    require_once("footer.html");
+    ?>
+    
     <script src="hospital_api/hospital_api.js"></script>
 </body>
 
