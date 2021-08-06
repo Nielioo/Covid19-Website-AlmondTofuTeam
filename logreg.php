@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="navigation_bar.css">
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="logreg.css">
 </head>
 
@@ -79,27 +78,25 @@
                 </form>
 
                 <?php
-        if (isset($_POST['register'])) {
-            $nama = $_POST['nama'];
-            $username = $_POST['username'];
-            $domisili = $_POST['domisili'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
+                if (isset($_POST['register'])) {
+                    $nama = $_POST['nama'];
+                    $username = $_POST['username'];
+                    $domisili = $_POST['domisili'];
+                    $email = $_POST['email'];
+                    $password = $_POST['password'];
 
-            createProfile($nama, $username, $domisili, $email, $password);
+                    createProfile($nama, $username, $domisili, $email, $password);
 
-            header("location: logreg.php");
-        }
-        ?>
+                    header("location: logreg.php");
+                }
+                ?>
 
             </div>
         </div>
     </div>
 
-    <?php
-    require_once("footer.html");
-    ?>
-
+    <h6 id="footer">© 2021 Almond Tofu Team. All right reserved.</h6>
+    
     <script src="logreg.js"></script>
 
 </body>

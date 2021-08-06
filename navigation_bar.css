@@ -6,6 +6,7 @@ ul {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 li {
@@ -107,5 +108,4 @@ li a {
   color: white;
   text-decoration: none;
   padding: 0em 2em;
-  font-weight: 300;
 }

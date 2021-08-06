@@ -51,7 +51,7 @@
 
     <div class="container">
         <section class="hero">
-            <h1><?= $bloodtype ?></h1>
+            <h1 class="hero_title"><?= $bloodtype ?></h1>
             <div class="hero_btn">
                 <a href="hospital.php?bloodtype=<?= getGolDarahID($bloodtype_plus) - 1 ?>" class="btn"><?= $bloodtype_plus ?></a>
                 <a href="hospital.php?bloodtype=<?= getGolDarahID($bloodtype_negative) - 1 ?>" class="btn"><?= $bloodtype_negative ?></a>
@@ -75,7 +75,7 @@
                 </svg>
             </div>
             <div class="hero_btn">
-                <a href="formdonor.php" class="btn">Donor Form</a>
+                <a href="formdonor.php" class="btn donor_btn">Donor Form</a>
             </div>
         </section>
 

@@ -62,6 +62,11 @@ body {
   flex-flow: column wrap;
 }
 
+.hero_title {
+  font-size: 3em;
+  margin: 0;
+}
+
 .hero_btn {
   margin: 50px auto;
 }
