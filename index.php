@@ -25,13 +25,15 @@
 
   <div class="container">
     <section class="hero">
-      <h1><b>Almond Tofu Website</b></h1>
-      <label><i>Our website always update the latest health news</i></label>
-      <div class="hero_btn">
-        <a href="bloodtype.php" class="btn">See More</a>
-      </div>
-      <div class="hero_image">
-        <img src="assets/family.png" />
+      <div class="hero_container">
+        <h1><b>Almond Tofu Website</b></h1>
+        <label><i>Our website always update the latest health news</i></label>
+        <div class="hero_btn">
+          <a href="bloodtype.php" class="btn">See More</a>
+        </div>
+        <div class="hero_image">
+          <img src="assets/family.png" />
+        </div>
       </div>
     </section>
 
